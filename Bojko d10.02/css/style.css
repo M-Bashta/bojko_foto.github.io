@@ -1,0 +1,286 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+section{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: sans-serif;
+	font-size: 72px;
+	text-transform: uppercase;
+	color: #000;
+	background: black;
+}
+
+.burger-menu__button{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 30;
+	height: 140px;
+	width: 80px;
+	border-radius: 50%;
+	transition: 0.4s;
+}
+
+
+.burger-menu__button:hover .burger-menu__lines{
+	filter: brightness(0.7);
+}
+.burger-menu__lines,
+.burger-menu__lines::after,
+.burger-menu__lines::before {
+	position: absolute;
+	width: 40px;
+	height: 4px;
+	background-color: #fff;
+}
+
+.burger-menu__lines{
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.burger-menu__lines::before{
+	content: '';
+	top: -12px;
+}
+
+
+.burger-menu__lines::after{
+	content: '';
+	top: 12px;
+}
+
+
+.burger-menu_active .burger-menu__button,
+.burger-menu_active .burger-menu__lines{
+	background-color: transparent;
+}
+
+.burger-menu_active .burger-menu__lines::before{
+	top: 0;
+	transform: rotate(45deg);
+}
+
+.burger-menu_active .burger-menu__lines::after{
+
+	top: 0;
+	transform: rotate(-45deg);
+
+}
+
+.burger-menu__nav{
+	padding-top: 120px;
+	position: fixed;
+	z-index: 20;
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+	background-color: #F6EFEF;
+	overflow-y: auto;
+	left: -100%;
+	transition: 0.5s;
+}
+
+.burger-menu_active .burger-menu__nav{
+	left: 0;
+	width: 300px;
+}
+
+.burger-menu__link{
+	margin: 5px;
+	padding: 15px;
+	font-family: sans-serif;
+	font-size: 20px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #504F4F;
+}
+
+.burger-menu__link-active{
+/*** Поставити функцію на дж щоб було активне/*/
+}
+
+.burger-menu__link:hover{
+	filter: :brightness(0.7);
+	background: red;
+	transition: 0.8;
+	border-radius: 20px;
+	color: #fff
+}
+
+.burger-menu__overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10; 
+}
+
+.burger-menu_active .burger-menu__overlay{
+	display: block;
+	
+}
+
+
+.burger-menu__link-contact{
+		text-decoration: none;
+		color: #504F4F;
+		padding: 20px;
+		margin-top: 5px;
+		margin-right: 5px;
+}
+
+.phone>img{
+	margin:-10px 5px;
+	width: 30px;
+	height: 30px;
+}
+
+/*******************************************/
+body{
+	 background: url(../img/sec.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+header{
+	display: flex;
+	flex-flow: column;
+	text-align: center;
+
+}
+
+header>h1{
+	padding-top: 16%;
+	color: #fff;
+	font-size: 80px;
+	letter-spacing: 10px;
+}
+
+header>p{
+	color: #fff;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+header>a{
+	text-decoration: none;
+	border: 1px solid #fff;
+	width: 350px;
+	margin: 50px auto;
+	padding: 25px;
+	font-size: 25px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+
+}
+
+
+header>a:hover{
+	background: #FC1A1A;
+	border: none;
+	transition: 1s;
+}
+
+
+
+/*************************LINK TWO******************/
+.name{
+	text-align: center;
+	padding-top: 200px;
+	color: #fff;
+	font-size: 110px;
+	letter-spacing: 48px;
+	text-transform: uppercase;
+	padding-left: 50px;
+}
+
+.container{
+	width: 100%;
+	min-height: 650px;
+	margin-top: 60px;
+	background: #3A3A3A;
+
+}
+
+
+.container>h2{
+	padding-top: 40px;
+	text-align: center;
+	color: #fff;
+	font-size: 35px;
+
+}
+
+.img_about{
+	width: 800px;
+	height: 500px;
+	padding-right: 100px;
+	padding-top: 40px;
+	padding-left: 40px;
+}
+
+.info_me{
+	display: flex;
+	justify-content: space-between;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.text{
+	color: #fff;
+	font-size: 16px;
+	padding-top: 40px;
+}
+
+/***PORTFOLIO***************/
+
+.row_one{
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	
+}
+
+
+.galery{
+
+	padding-top: 50px;
+	width: 700px;
+	display: flex;
+	margin: 0 auto
+
+
+}
+
+
+.photo-row__two{
+		height: 450px;
+}
+
+.photo-row__thre{
+	width: 300px;
+	
+}
+
+
+
+
+
+
+
